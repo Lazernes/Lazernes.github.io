@@ -2,11 +2,24 @@
 main:
    #- title: "Quick-Start Guide"
    #  url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
-   - title: "Introduce"
-     url: /about/ # https://mmistakes.github.io/minimal-mistakes/about/
+   #- title: "Introduce"
+   #  url: /about/ # https://mmistakes.github.io/minimal-mistakes/about/
    - title: "Category"
      url: /categories/
-   - title: "Tags"
-     url: /tags/
-   - title: "Sitemap"
-     url: /sitemap/
+   #- title: "Tags"
+   #  url: /tags/
+   #- title: "Sitemap"
+   #  url: /sitemap/
+
+docs:
+  #test
+  - title: Sidebar Test
+    children:
+     - title: "Child1"
+       url: /Child1/
+     - title: "Child2"
+       url: /Child2/
+  - title: Sidebar Test 2
+    children:
+     - title: "Child3"
+       url: /Child3/

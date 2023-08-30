@@ -16,11 +16,11 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "ko-KR" # "en-US", 블로그의 주요 언어
-title                    : "기계과의 개발자 공부 Blog" # 사이드 탬에서 보이는 이름
+title                    : "기계과 탈출기" # 사이드 탬에서 보이는 이름
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "MyeongWoo" # 화면 하단 영역의 이름
-description              : "Hongik University Mechanical System Design Engineering, Computer Engineering" # 설명란
+description             : "Hongik University Mechanical System Design Engineering, Computer Engineering" # 설명란
 url                      : "https://Lazernes.github.io.git" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -106,9 +106,9 @@ analytics:
 author:
   name             : "MyeongWoo"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "Hongik University Mechanical System Design Engineering, Computer Engineering"
+  bio              : "Hongik University<br>Mechanical System<br>Design Engineering,<br>Computer Engineering"
                      # 자기소개, 줄바꿈은 <br>로 굵은 글씨는 **글씨**로 표기
-  location         : "Republic of korea"
+  location         : "Seoul, Republic of korea"
   email            : #이메일 주소, links에서 작성할수 있기 때문에 생략
   links:
     - label: "Email"
@@ -294,3 +294,5 @@ defaults:
       comments: # true
       share: true
       related: true
+      sidebar:
+          nav: "docs"
