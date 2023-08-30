@@ -15,12 +15,12 @@
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "ko-KR" # "en-US", 블로그의 주요 언어입니다.
-title                    : "Blog"
+locale                   : "ko-KR" # "en-US", 블로그의 주요 언어
+title                    : "기계과의 개발자 공부 Blog" # 사이드 탬에서 보이는 이름
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Your Name"
-description              : "An amazing website."
+name                     : "MyeongWoo" # 화면 하단 영역의 이름
+description              : "Hongik University Mechanical System Design Engineering, Computer Engineering" # 설명란
 url                      : "https://Lazernes.github.io.git" # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
