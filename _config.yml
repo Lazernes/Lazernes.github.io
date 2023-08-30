@@ -104,11 +104,12 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "MyeongWoo"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "Hongik University Mechanical System Design Engineering, Computer Engineering"
+                     # 자기소개, 줄바꿈은 <br>로 굵은 글씨는 **글씨**로 표기
+  location         : "Republic of korea"
+  email            : #이메일 주소, links에서 작성할수 있기 때문에 생략
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
@@ -124,14 +125,17 @@ author:
       # url: "https://facebook.com/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url: "https://github.com/"
+      url: "https://github.com/Lazernes"
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url: "https://instagram.com/"
+      url: "https://instagram.com/m.w0_0.y/"
 
 # Site Footer
 footer:
   links:
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope-square"
+      url: mailto:dbsauddn1@gmail.com
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       # url:
@@ -218,7 +222,7 @@ sass:
 
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 5 # amount of posts to show, painate의 속성이 보여질 개수수
 paginate_path: /page:num/
 timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
@@ -290,3 +294,10 @@ defaults:
       comments: # true
       share: true
       related: true
+# _pages  : 새로 추가함
+- scope:
+    path: "_pages"
+    type: pages
+  values:
+    layout: single
+    author_profile: true
