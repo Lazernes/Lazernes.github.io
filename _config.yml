@@ -113,7 +113,7 @@ author:
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      # url: "mailto:your.name@email.com"
+      url: mailto:dbsauddn1@gmail.com
     - label: "Website"
       icon: "fas fa-fw fa-link"
       # url: "https://your-website.com"
@@ -144,7 +144,7 @@ footer:
       # url:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      # url:
+      url: "https://github.com/Lazernes"
     - label: "GitLab"
       icon: "fab fa-fw fa-gitlab"
       # url:
@@ -153,7 +153,7 @@ footer:
       # url:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
-      # url:
+      url: "https://instagram.com/m.w0_0.y/"
 
 
 # Reading Files
@@ -294,10 +294,3 @@ defaults:
       comments: # true
       share: true
       related: true
-# _pages  : 새로 추가함
-- scope:
-    path: "_pages"
-    type: pages
-  values:
-    layout: single
-    author_profile: true
