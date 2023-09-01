@@ -17,13 +17,13 @@ sidebar:
 
 docs:
   #test
-  - title: Sidebar Test
+  - title: Programing
     children:
-     - title: "Child1"
+     - title: "Javascript"
        url: "/Child1"
-     - title: "Child2"
+     - title: "React"
        url: "/Child2"
-  - title: Sidebar Test 2
+  - title: Algorithm
     children:
-     - title: "Child3"
+     - title: "Bakjun"
        url: "/Child3"
