@@ -11,15 +11,19 @@ main:
    #- title: "Sitemap"
    #  url: /sitemap/
 
+author_profile: true
+sidebar:
+  nav: "docs"
+
 docs:
   #test
   - title: Sidebar Test
     children:
      - title: "Child1"
-       url: /Child1/
+       url: "/Child1"
      - title: "Child2"
-       url: /Child2/
+       url: "/Child2"
   - title: Sidebar Test 2
     children:
      - title: "Child3"
-       url: /Child3/
+       url: "/Child3"
