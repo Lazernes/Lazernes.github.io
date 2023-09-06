@@ -16,14 +16,32 @@ sidebar:
   nav: "docs"
 
 docs:
-  #test
   - title: Programing
+    use: true
     children:
      - title: "Javascript"
-       url: "/Child1"
+       url: /categories/
      - title: "React"
-       url: "/Child2"
+       url: "/categories/"
+
   - title: Algorithm
+    use: true
     children:
      - title: "Bakjun"
-       url: "/Child3"
+       url: "/categories/"
+
+  - title: Computer Engineering
+    use: true
+    children:
+     - title: "운영체제"
+       url: "/categories/"
+     - title: "기초데이터베이스"
+       url: "/categories/"
+
+  - title: Mechanical Engineering
+    use: true
+    children:
+     - title: "기계요소설계"
+       url: "/categories/"
+     - title: "열시스템디자인"
+       url: "/categories/"
