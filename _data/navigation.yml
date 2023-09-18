@@ -19,7 +19,7 @@ docs:
   - title: Programing
     use: true
     children:
-     - title: "Javascript"
+     - title: "Morden Javascript"
        url: /categories/
      - title: "React"
        url: "/categories/"

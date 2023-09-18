@@ -1,5 +1,5 @@
 ---
-title: "Javascript"
+title: "Morden Javascript"
 permalink: /categories/javascript/
 layout: archive # category
 authoe_profile: true
@@ -8,7 +8,7 @@ sidebar_main: true
 # taxononmy: Javascript
 ---
 
-자바스크립트
+모던 자바스크립트
 
 {% assign posts = site.categories['Javascript']%}
 {% for post in posts %}
