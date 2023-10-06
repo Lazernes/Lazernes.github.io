@@ -1,16 +1,16 @@
 ---
-title: "React"
-permalink: /categories/React/
+title: "Operating Systems"
+permalink: categories/Operating Systems
 layout: archive # category
-authoe_profile: true
-sidebar_main: true
+author_profile: true
+sidebar:
+  nav: "docs"
 # types: posts
 # taxononmy: Javascript
 ---
 
-React
 
-{% assign posts = site.categories['React']%}
+{% assign posts = site.categories['Operating Systems']%}
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}

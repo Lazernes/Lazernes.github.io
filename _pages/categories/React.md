@@ -1,16 +1,17 @@
 ---
-title: "Baekjoon"
-permalink: /categories/Baekjoon/
+title: "React"
+permalink: categories/React
 layout: archive # category
-authoe_profile: true
-sidebar_main: true
+author_profile: true
+sidebar:
+  nav: "docs"
 # types: posts
 # taxononmy: Javascript
 ---
 
-백준
 
-{% assign posts = site.categories['Baekjoon']%}
+
+{% assign posts = site.categories['React']%}
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}

@@ -19,31 +19,31 @@ docs:
   - title: Programing
     use: true
     children:
-     - title: "Morden Javascript"
-       url: /categories/
+     - title: "Modern Javascript"
+       url: "/categories/Modern Javascript"
      - title: "React"
-       url: "/categories/"
+       url: "/categories/React"
 
   - title: Algorithm
     use: true
     children:
      - title: "Baekjoon"
-       url: "/categories/"
+       url: "/categories/Baekjoon"
      - title: "Do it! 알고리즘 코딩테스트 C++"
-       url: "/categories/"
+       url: "/categories/Do it! 알고리즘 코딩테스트 C++"
 
   - title: Computer Engineering
     use: true
     children:
      - title: "Operating Systems"
-       url: "/categories/"
+       url: "/categories/Operating Systems"
      - title: "Introduction To Database"
-       url: "/categories/"
+       url: "/categories/Introduction To Database"
 
   - title: Mechanical Engineering
     use: true
     children:
      - title: "Mechanical Elements Design"
-       url: "/categories/"
+       url: "/categories/Mechanical Elements Design"
      - title: "Thermal System Design"
-       url: "/categories/"
+       url: "/categories/Thermal System Design"

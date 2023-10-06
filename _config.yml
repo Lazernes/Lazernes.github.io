@@ -292,7 +292,8 @@ defaults:
     values:
       layout: single
       author_profile: true
-      read_time: true
+      read_time: false
+      show_date: true
       comments: true #comment를 주석 해지 후 true로 수정
       share: true
       related: true
