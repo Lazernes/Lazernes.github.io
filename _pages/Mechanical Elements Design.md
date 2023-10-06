@@ -1,6 +1,6 @@
 ---
-title: "기초데이터베이스"
-permalink: /categories/기초데이터베이스/
+title: "Mechanical Elements Design"
+permalink: /categories/Mechanical Elements Design/
 layout: archive # category
 authoe_profile: true
 sidebar_main: true
@@ -8,9 +8,9 @@ sidebar_main: true
 # taxononmy: Javascript
 ---
 
-기디비
+기계요소설계
 
-{% assign posts = site.categories['기초데이터베이스']%}
+{% assign posts = site.categories['Mechanical Elements Design']%}
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}

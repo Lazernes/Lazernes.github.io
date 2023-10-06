@@ -1,6 +1,6 @@
 ---
-title: "열시스템디자인"
-permalink: /categories/열시스템디자인/
+title: "Baekjoon"
+permalink: /categories/Baekjoon/
 layout: archive # category
 authoe_profile: true
 sidebar_main: true
@@ -8,9 +8,9 @@ sidebar_main: true
 # taxononmy: Javascript
 ---
 
-열시디
+백준
 
-{% assign posts = site.categories['열시스템디자인']%}
+{% assign posts = site.categories['Baekjoon']%}
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}

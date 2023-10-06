@@ -1,6 +1,6 @@
 ---
-title: "운영체제"
-permalink: /categories/운영체제/
+title: "Thermal System Design"
+permalink: /categories/Thermal System Design/
 layout: archive # category
 authoe_profile: true
 sidebar_main: true
@@ -8,9 +8,9 @@ sidebar_main: true
 # taxononmy: Javascript
 ---
 
-운체
+열시스템디자인
 
-{% assign posts = site.categories['운영체제']%}
+{% assign posts = site.categories['Thermal System Design']%}
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}
