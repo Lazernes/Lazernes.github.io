@@ -47,3 +47,5 @@ docs:
        url: "/categories/Mechanical Elements Design"
      - title: "Thermal System Design"
        url: "/categories/Thermal System Design"
+     - title: "Automatic Control Systems"
+       url: "/categories/Automatic Control Systems"
