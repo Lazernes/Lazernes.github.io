@@ -16,7 +16,7 @@ last_modified_at: 2023-10-10
 ---
 HTML
 ======
-<p align="center"><img src="/assets/img/Modern-Javascript/GDSC_Week4_1.jpg" width="300" height="500"></p>
+<p align="center"><img src="/assets/img/Modern-Javascript/GDSC-4주차/GDSC_Week4_1.jpg" width="300" height="500"></p>
 
 다음과 같은 계산기 구조를 만들기 위해서 index.html을 다음과 같이 작성해주었다.
 
@@ -59,7 +59,7 @@ HTML
 ```
 
 연산자는 **operator**, 숫자는 **num**, 초기화는 **ac**, 결과(=)는 **result**라는 클래스를 각각 주었다. 위 HTML파일을 완성하면 다음과 같이 나타난다.<br/>
-<p align="center"><img src="/assets/img/Modern-Javascript/GDSC_Week4_2.png"></p>
+<p align="center"><img src="/assets/img/Modern-Javascript/GDSC-4주차/GDSC_Week4_2.png"></p>
 
 
 CSS
@@ -121,7 +121,7 @@ button {
 ```
 위 파일에서 **grid-template-columns: repeat(4, 1fr);**는 컨테이너를 열 방향으로 4등분을 해주는 역할을 한다.<br/>
 CSS파일을 완성하면 다음과 같다.<br/>
-<p align="center"><img src="/assets/img/Modern-Javascript/GDSC_Week4_3.png" width="300" height="500"></p>
+<p align="center"><img src="/assets/img/Modern-Javascript/GDSC-4주차/GDSC_Week4_3.png" width="300" height="500"></p>
 
 지금은 버튼을 눌러도 아무런 변화가 나오지 않는다.
 
@@ -395,4 +395,4 @@ let calculator = () => {
 calculator();
 ```
 이제 계산기 기능을 사용하면 다음과 같이 나온다.<br/>
-<p align="center"><img src="/assets/img/Modern-Javascript/GDSC_Week4_4.png" width="300" height="500"></p>
+<p align="center"><img src="/assets/img/Modern-Javascript/GDSC-4주차/GDSC_Week4_4.png" width="300" height="500"></p>

@@ -119,7 +119,7 @@ h1, h2 {
 }
 ```
 투두리스트의 전체적인 틀을 만들어 주기위해 container 속성을 만들어준다.<br/> 웹 화면에서 다음과 같이 나오는데<br/>
-<p align="center"><img src="/assets/img/GDSC_Week3_1.png" width="400" height="300"></p><br/>
+<p align="center"><img src="/assets/img/Modern-Javascript/GDSC-3주차/GDSC_Week3_1.png" width="400" height="300"></p><br/>
 
 **to do**와 **done**사이에 공간을 만들고 구분선을 만들어 주기 위해서 다음 코드를 입력한다.
 ```css
@@ -139,7 +139,7 @@ h1, h2 {
 }
 ```
 위 코드를 적용하면 다음과 같이 웹에 표시된다.
-<p align="center"><img src="/assets/img/GDSC_Week3_2.png" width="400" height="300"></p><br/>
+<p align="center"><img src="/assets/img/Modern-Javascript/GDSC-3주차/GDSC_Week3_2.png" width="400" height="300"></p><br/>
 위 화면에서 사용자가 입력하는 부분이 너무 작아서 과제 예제를 참조해 다음과 같은 코드를 입력해 주었다.
 
 ```css
@@ -170,7 +170,7 @@ h1, h2 {
 }
 ```
 위 코드들을 적용해 주면 다음과 같이 웹에 표시된다.
-<p align="center"><img src="/assets/img/GDSC_Week3_3.png" width="400" height="300"></p><br/>
+<p align="center"><img src="/assets/img/Modern-Javascript/GDSC-3주차/GDSC_Week3_3.png" width="400" height="300"></p><br/>
 
 style.css
 ------
