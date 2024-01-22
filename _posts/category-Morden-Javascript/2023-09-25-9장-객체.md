@@ -6,7 +6,7 @@ wirter: Myeongwoo Yoon
 categories:
   - Modern Javascript
 tags:
-  - Programing
+  - Javascript
 
 toc: true
 toc_sticky: true

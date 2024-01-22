@@ -6,8 +6,8 @@ main:
    #  url: /about/ # https://mmistakes.github.io/minimal-mistakes/about/
    - title: "Category"
      url: /categories/
-   #- title: "Tags"
-   #  url: /tags/
+   - title: "Tags"
+     url: /tags/
    #- title: "Sitemap"
    #  url: /sitemap/
 
