@@ -16,13 +16,19 @@ sidebar:
   nav: "docs"
 
 docs:
-  - title: Programing
+  - title: Frontend
     use: true
     children:
      - title: "Modern Javascript"
        url: "/categories/Modern Javascript"
      - title: "한 입 크기로 잘라먹는 리액트"
        url: "/categories/한 입 크기로 잘라먹는 리액트"
+
+  - title: Backend
+    use: true
+    children:
+     - title: "김영한의 자바 입문"
+       url: "/categories/김영한의 자바 입문"
 
   - title: Algorithm
     use: true
