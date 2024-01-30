@@ -1,6 +1,6 @@
 ---
-title: "Baekjoon"
-permalink: categories/Baekjoon
+title: "BEAKJOON"
+permalink: categories/BEAKJOON
 layout: archive # category
 author_profile: true
 sidebar:
@@ -10,7 +10,7 @@ sidebar:
 ---
 
 
-{% assign posts = site.categories['Baekjoon']%}
+{% assign posts = site.categories['BEAKJOON']%}
 {% for post in posts %}
   {% include archive-single.html type=page.entries_layout %}
 {% endfor %}
