@@ -29,6 +29,8 @@ docs:
     children:
      - title: "김영한의 자바 입문"
        url: "/categories/김영한의 자바 입문"
+     - title: "김영한의 스프링 입문"
+       url: "/categories/김영한의 스프링 입문"
 
   - title: Algorithm
     use: true
