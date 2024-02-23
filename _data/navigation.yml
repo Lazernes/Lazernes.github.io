@@ -47,6 +47,8 @@ docs:
        url: "/categories/Operating Systems"
      - title: "Introduction To Database"
        url: "/categories/Introduction To Database"
+     - title: "정보처리기사"
+       url: "/categories/정보처리기사"
 
   - title: Mechanical Engineering
     use: true
