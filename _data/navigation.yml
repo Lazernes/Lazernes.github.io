@@ -49,6 +49,8 @@ docs:
        url: "/categories/Introduction To Database"
      - title: "정보처리기사"
        url: "/categories/정보처리기사"
+     - title: "SQLD"
+       url: "/categories/SQLD"
 
   - title: Mechanical Engineering
     use: true
