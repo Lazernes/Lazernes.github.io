@@ -51,6 +51,8 @@ docs:
        url: "/categories/정보처리기사"
      - title: "SQLD"
        url: "/categories/SQLD"
+     - title: "Algorithms&Analysis"
+       url: "/categories/Algorithms&Analysis"
 
   - title: Mechanical Engineering
     use: true
