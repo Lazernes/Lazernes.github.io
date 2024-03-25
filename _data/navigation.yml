@@ -53,6 +53,8 @@ docs:
        url: "/categories/SQLD"
      - title: "Algorithms&Analysis"
        url: "/categories/Algorithms&Analysis"
+     - title: "Software Enginnering"
+       url: "/categories/Software Engineering"
 
   - title: Mechanical Engineering
     use: true
