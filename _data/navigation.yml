@@ -31,6 +31,8 @@ docs:
        url: "/categories/김영한의 자바 입문"
      - title: "김영한의 스프링 입문"
        url: "/categories/김영한의 스프링 입문"
+     - title: "김영한의 스프링 핵심 원리"
+       url: "/categories/김영한의 스프링 핵심 원리"
 
   - title: Algorithm
     use: true
