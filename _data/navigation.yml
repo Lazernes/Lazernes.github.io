@@ -23,6 +23,8 @@ docs:
        url: "/categories/Modern Javascript"
      - title: "한 입 크기로 잘라먹는 리액트"
        url: "/categories/한 입 크기로 잘라먹는 리액트"
+     - title: "Flutter"
+       url: "/categories/Flutter"
 
   - title: Backend
     use: true
