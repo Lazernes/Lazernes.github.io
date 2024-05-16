@@ -59,6 +59,8 @@ docs:
        url: "/categories/Algorithms&Analysis"
      - title: "Software Enginnering"
        url: "/categories/Software Engineering"
+     - title: "AIML 응용프로젝트"
+       url: "/categories/AIML"
 
   - title: Mechanical Engineering
     use: true
