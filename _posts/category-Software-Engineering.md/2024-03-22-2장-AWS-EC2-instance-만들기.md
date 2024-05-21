@@ -13,7 +13,7 @@ toc_sticky: true
 use_math: true 
 
 date: 2024-03-22
-last_modified_at: 2023-03-22
+last_modified_at: 2024-03-22
 ---
 
 &ensp;https://aws.amazon.com/ko/에 접속하여 AWS 계정을 생성한다.
