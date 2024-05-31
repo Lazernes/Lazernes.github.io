@@ -13,7 +13,7 @@ toc_sticky: true
 use_math: true 
 
 date: 2024-05-16
-last_modified_at: 2024-05-16
+last_modified_at: 2024-05-30
 ---
 
 Kubernetes intro
@@ -21,9 +21,215 @@ Kubernetes intro
 
 Official Definition of Kubernetes
 ------
-&ensp;**k8s** 또는 **kube**라고도 하는 **Kubernetes**는 컨테이너화된 애플리케이션의 배포, 관리 및 확장을 예약하고 자동화하기 위한 컨테이너 오케스트레이션(Container Orchestraion) 플랫폼이다. 수많은 container들이 이질적인 deployment 환경에서 실행할 수 있도록 돕는 도구로, 수요에 따라 동적으로 container의 수를 증감하고 실직적으로는 Cloud Service Provider의 CDN에서 실행한다.<br/>
+&ensp;**k8s** 또는 **kube**라고도 하는 **Kubernetes**는 컨테이너를 쉽고 빠르게 배포, 확장하고 관리를 자동화해주는 오픈소스 플랫폼으로, 컨테이너화된 애플리케이션의 배포, 관리 및 확장을 예약하고 자동화하기 위한 컨테이너 오케스트레이션(Container Orchestraion) 플랫폼이다. 수많은 container들이 이질적인 deployment 환경에서 실행할 수 있도록 돕는 도구로, 수요에 따라 동적으로 container의 수를 증감하고 실직적으로는 Cloud Service Provider의 CDN에서 실행한다.<br/>
 &ensp;**Container orchestration**은 모든 앱은 microservice들을 Container로 만들어서 배포한다. 매우 많은 수의 복제된 container들이 배포되는데 수백, 수천 개의 container들을 동적으로 관리하는 것이 여렵기 때문에 Orchestraion 도구가 필수적이다.<br/>
 &ensp;즉, 컨테이너 오케스트레이션은 대규모 애플리케이션을 배포할 수 있도록 컨테이너의 네티워킹 및 관리를 자동화하는 프로세스이다. 애플리케이션이 성장하고 복잡해짐에 따라 마이크로서비스 아키텍처에는 수백 또는 수천 개의 컨테이너가 있을 수 있다. 컨테이너 오케스트레이션 도구는 프로비저닝과 스케줄링에서 배포 및 삭제에 이르는 전체 수명 주기를 자동화하여 컨테이너 인프라 관리를 간소화하는 것을 목표로 한다.
 * High availability(No downtime in service)
 * Scalability(high service throughput against high demands)
 * Disaster recovery(backup & restore)
+
+&ensp;쿠버네티스는 다음을 제공한다.
+* Automatic bin packing(RAM-aware performance based)
+  - 클러스터 내에서 파드(Pod)를 최적의 노드에 자동으로 배치하여 리소스를 효율적으로 사용하고 비용을 절감하는 기능을 의미한다. 이를 통해 클러스터의 전반적인 자원 활용률을 최대화하고, 워크노드의 요구사항을 충족하는 최적의 배치를 제공한다.
+* Service discovery & load balancing(DNS name for each service)
+  - **서비스 디스커버리와 로드 밸런싱**
+  - 쿠버네티스는 DNS 이름을 사용하거나 자체 IP 주소를 사용하여 컨테이너를 노출할 수 있다. 컨테이너에 대한 트래픽이 많으면, 쿠버네티스는 네트워크 트래픽을 로드밸런싱하고 배포하여 배포가 안정적으로 이루어질 수 있다.
+  - Load balancing: 애플리케이션을 지원하는 리소스 풀 전체에 네트워크 트래픽을 균등하게 배포하는 방법.
+* Storage orchestration
+  - **스토리지 오케스트레이션**
+  - 쿠버네티스를 사용하면 로컬 저장소, 공용 클라우드 공급자 등과 같이 원하는 저장소 시스템을 자동으로 탑재할 수 있다.
+* Self healing(restart faild containers)
+  - **자동화된 복구**
+  - 쿠버네티스는 실패한 컨테이너를 다시 시작하고, 컨테이너를 교체하며, '사용자 정의 상태 검사'에 응답하지 않는 컨테이너를 죽이고, 서비스 준비가 끝날 때까지 그러한 과정을 클라이언트에 보여주지 않는다.
+* Automated rollouts & rollbacks
+  - **자동화된 롤아웃과 롤백**
+  - 쿠버네티스를 사용하여 배포된 컨테이너의 원하는 상태를 서술할 수 있으며 현재 상태를 원하는 상태로 설정한 속도에 따라 변경할 수 있다.
+  - 예를 들어, 쿠버네티스를 자동화해서 배포용 새 컨테이너를 만들고, 기존 컨테이너를 제거하고, 모든 리소스를 새 컨테이너에 적용할 수 있다.
+* Secret and configuration management(secret & config map in ETCD)
+  - **시크릿과 구성 관리**
+  - 쿠버네티스를 사용하면 암호, OAuth 토큰 및 SSH 키와 같은 중요한 정보를 저장하고 관리할 수 있다. 컨테이너 이미지를 재구성하지 않고 스택 구성에 시크릿을 노출하지 않고도 시크릿 및 애플리케이션 구성을 배포 및 업데이트할 수 있다.
+* Batch execution(run to completion)
+  - **배치 작업**
+  - 주로 데이터 처리, 대규모 계산, 주기적인 작업 등 일시적으로 실행되는 작업을 관리하기 위해 사용된다.
+* Horizontal scaling(CLI, UI, automatic based on CPU usage)
+  - **수평 확장**
+  - 워크노드의 증가에 대응하기 위해 애플리케이션의 인스턴스 수를 조정하는 기능을 의미한다. 이를 통해서 시스템의 유연성과 확장성을 높여 고가용성을 유지할 수 있다.
+
+Kubernetes Architecture
+------
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-1-KubernetesArchitecture.png" width="800"></p>
+
+* Kuberbetes Cluster 는 최소 한개의 master node와 연결된 worker nodes들로 구성되어있고 각각의 worker node는 **Kubelet** process를 가지고 있다. Kubelet(쿠블릿)는 pod에서 container가 확실하게 동작하도록 관리한다. 각 노드에서 pod를 생성하고 정상적으로 동작하는지 관리하는 역할을 담당하고 있으며, kubernetes의 work node를 관리하기 위해 내려지는 명령은 kubelet을 통해 수행된다고 볼 수 있다.
+* 각각의 worker node는 서로 다른 application을 배포하는 컨테이너를 가지고 있고 워크노드는 서로 다른 수의 container를 가질 수 있다. 즉, Worker Nodes 에서 application이 실행되고 있는 것이다.
+* Master Nodes에서는 kubernetes 클러스터를 적절히 실행하고 관리하는 중요한 프로세스들이 동작중이다. 각각의 프로세스들은 다음과 같다.
+
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-2-MasterNodes.png" width="800"></p>
+
+* **API Server**
+  - Entrypoint(진입점, 프로그램의 시작점) to k8s cluster
+  - 쿠버네티스 컨트롤 플레인의 프론트 엔드
+  - 쿠버네티스 클러스터로 들어오는 요청을 가장 앞에서 접수하는 역할을 한다.
+* **Controller Manager**
+  - Keeps track of whats happening in the cluster
+  - 다운된 노드가 없는지, 파드가 의도한 복제(Replicas) 숫자를 유지하고 있는지, 서비스와 파드는 적절하게 연결되어 있는지, 네임스페이스에 대한 기본 계정이 토큰이 생성되어 있는지를 확인하고 적절하지 않다면 적절한 수준을 유지하기 위해 조치하는 역할을 한다.
+* **Scheduler**
+  - Ensure pods placement
+  - 쿠버네티스 클러스터는 여러 노드로 구성되어 있고 기본적인 작업 단위라고 할 수 있는 파드는 여러 노드 중 특정 노드에 배치되어 동작하게 된다. 이때 새로 생생된 파드를 감지하여 어떤 노드로 배치할지 결정하는 작업을 **스케줄링**이라고 한다.
+  - 스케줄링을 위해 노드 및 파드의 각종 요구사항과 제약사항을 종합적으로 판단할 필요가 있는데, 이러한 판단 또한 scheduler의 역할이다.
+  - 회사로 비유하면, 각 부서 인력 소요 계획과 신입사원 역량을 고려해 적잘한 부서로 배치하는 인사 담당 부서에 비유할 수 있다.
+* **etcd**
+  - Kubernetes backing store
+  - 겉으로는 쉽게 드러나지 않아 놓치기 쉽지만 매우 중요한 역할을 담당하고 있는 컴포넌트
+  - 쿠버네티스 클러스터가 동작하기 위해서는 클러스터 및 리소스의 구성 정보, 상태 정보 및 명세 정보 등이 필요한데, etcd는 이를 key-value 형태로 저장하는 저장소이다.
+
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-3-VirtualNetwork.png" width="800"></p>
+
+* 마지막 구성요소로 **Virtual Network**가 있다.
+* Virtual Network는 클러스터 내에서 파드들이 통신할 수 있도록 해주는 네트워크 인프라를 의미한다. 즉, Worker Nodes와 Master Nodes들이 서로 통신할 수 있게 해준다.
+* Creates one unified machine
+
+Node & Pod
+------
+&ensp;쿠버네티스는 컨테이너를 파트내에 배치하고 노드에서 실행함으로 워크노드를 구동한다. **Node**는 클러스터에 따라 가상 또는 물리적 머신일 수 있다. 각 노드는 Control Plan에 의해 관리되며 파드를 실행하는 데 필요한 서비스를 포함한다. 일반적으로 클러스터에는 하나 또는 여러 개의 노드가 있을 수 있다.<br/>
+&ensp;**Pod**는 Kubernetes에서 생성(create)하고 관리(manage, schedule)할 수 있는 배포(deploy) 가능한 가장 작은 단위이다. Pod는 한 개 이상의 container를 담고 있는 논리적인 호스트로서 하나의 pod 내의 container들은 network namespace를 공유하며 localhost를 사용하여 상호 통신한다.<br/>
+&ensp;거의 예외 없이 하나의 pod 안에는 특정 업무를 수행하는 tightly coupled container(밀접하게 결합된 하나 이상의 애프리케이션 컨테이너)들만 담긴다. 동일한 pod 속에 위치한 모든 container들은 운명을 같이한다. 모두 한꺼번에 태어나고 schedule되고 manage된다. 즉, 하나의 container가 망가지면 전체 pod가 함께 종료되고 kubernetes에 의해 다시 schedule된다. 유사한 requirement 또는 dependency를 갖는 container들만 하나의 pod에 넣는 것이 권장된다.<br/>
+&ensp;통상적으로 pod속 container들을 기능별로 구별하면 다음과 같다.
+* **App container**: Main container로서 pod의 핵심 애플리케이션을 실행한다.
+* **Sidecar container**: 주 애플리케이션을 보완하거나 개선하는 역할을 하며, Logging, monitoring, data processing 등의 기능을 보조한다.
+* **Proxy container**: 네트워크 트래픽을 관리하거나 조정하는 역할을 하며, 보안, load balancing, service discovery, SSL termination, 트래픽 제어 등의 기능을 수행한다.
+* **Init container**
+  - App container가 실행되기 전에 필요한 설정이나 준비 작업을 수행하며, DB setup, configuration file down등과 같이 initialization task를 수행하는 container이다.
+* **Helper container**
+  - 특정 작업을 지원하거나 주기적인 작업을 수행하는 컨테이너로, data backup, restoring등과 같은 경우에 따라 필요한 작업을 수행하는 container이다.
+
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-4-Pod-1.png" width="800"></p>
+
+* Node: virtual or physical machine
+* Pod: Smallest unit in Kubernetes, Abstraction over container
+* You only interact with the Kubernetes layer
+
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-5-Pod-2.png" width="800"></p>
+
+* Usually 1 Application per Pod
+* Each Pod gets its own IP address
+* Pods are ephemera(하루살이)
+* New IP address on re-creation
+
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-6-SVC.png" width="800"></p>
+
+* **Service**는 pod 집합에서 실행중인 애플리케이션을 네트워크 서비스로 노출하는 추상화 방법이다.
+* Service는 permanent(영구적인) IP address를 가지고 있다.
+* Lifecycle of Pod and Service not connected
+  - pod가 죽어도 Service IP 주소는 Stay
+* External Service는 외부에서 접근 가능하지만 DB Service(Internal Service)는 외부에서 접근 불가능
+  - You specify the type of Service on creation
+  - Internal Service is the default type
+* http://124.89.101.2:8080과 같은 IP Address를 보통 https://my-app.com의 형식으로 사용한다.
+
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-7-Service&Ingress.png" width="800"></p>
+
+* **Ingress**(인그레스)는 클러스터 외부에서 클러스터 내부 서비스로 HTTP와 HTTPS 경로를 노출한다. 인그레스는 다음과 같은 기능들을 제공한다.
+  - 외부에서 접속가능한 URL 사용
+  - 트래픽 로드밸런싱
+  - SSL 인증서 처리
+  - 도메인 기반 가상 호스팅 제공
+* 인그레스는 위와 같은 기능들에 대해 정의하둔 규칙들을 저의해둔 리소스이고, 이를 실제로 동작하기 위해서는 인그레스 컨트롤러가 필요하다.
+
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-8-Volume.png" width="800"></p>
+
+* 컨테이너 특성 상 어떠한 문제가 발생하여 컨테이너가 삭제 된다면 데이터도 같이 삭제된다. 로그 파일을 보관해야 한다거나, DB를 사용할 경우 실시간으로 생성되던 데이터가 사라지면 큰 문제가 발생한다. 그래서 컨테이너를 사용할 때 중요한 데이터가 있다면 **Volumn**을 사용하여 데이터를 보관해주어야 한다.
+* 쿠버네티스는 Volume을 이용하여 컨테이너의 디렉토리를 외부 저장소(local, remote storage)와 연결한다.
+
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-9-Deployment&StatefulSet-1.png" width="800"></p>
+
+* 운영 중에 애플리케이션의 새 버전을 배포하거나 부하가 증가하여 새로운 컨테이너 이미지를 사용해야 하는 상황에서 pod 실행의 연속성을 보장(서비스가 중딘되지 않게)하기 위해 **ReplicaSet**을 사용한다.
+* 레플리카셋은 사용자가 지정한 개수만큼 복제 pod를 생성해주고 복제 컨트롤러를 이용해 해당 개수의 복제 pod가 정상 실행 중인지 항상 감시한다.
+* 파드 하나에 문제가 생겨 다운되면 이를 감지해 새 파드를 바로 생성해준다.
+* 하지만 애플리케이션을 업그레이드하여 배포해야 하는 경우 레플리카셋은 업데이트에 관한 기능을 제공하지 않기 때문에 Deployment를 사용한다.
+
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-10-Deployment&StatefulSet-2.png" width="800"></p>
+
+* **Deployment** is Blueprint for "my-app" pods
+* Deployment는 pod와 replicaset에 대한 배포를 관리한다.
+* 운영 중에 애플리케이션의 새 버전을 배포해야하거나 부하가 증가하면서 pod를 추가하는 등 여러 가지 동작을 deployment로 관리할 수 있다. 또한 Deployment는 배포에 대한 이력을 관리하는데 만약 배포한 새 버전에 문제가 생긴 경우 Deployment를 통해 쉽게 이전 버전으로 롤백할 수 있다.
+
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-11-Deployment&StatefulSet-3.png" width="800"></p>
+
+* Deployment는 쿠버네티스에서 **Stateless**(상태가 없는) 앱을 배포할 때 사용하는 가장 기본적인 컨트롤러이지만 **StatefulSet**은 애플리케이션의 Stateful을 관리하는데 사용한다.
+  - Stateless Application: 클라이언트와 서버의 연결 구조에서 불필요한 상태의 반영을 위한 데이터나 리소스가 사용되지 않는다. 즉, 지속적인 상태 정보를 저장하고 반영하기 위한 추가적인 작업이나 리소스가 존재하지 않는다. 예를들어, 앱, 웹이 있다.
+  - Stateful Application: 서비스간 작업 처리의 상태가 항상 공유되고 있는 상태로 한번 연결된 두 관계는 어느 한 쪽이 일방적으로 끊지 않는 이상 유일한 관계를 가진다. 에를들어, DB가 있다.
+* 쿠버네티스에서 마이크로서비스 구조로 동작하는 애플리케이션은 대부분 Stateless가 많아 Deployment, ReplicaSet을 통해 쉽게 애플리케이션을 배포할 수 있다. 하지만 데이터베이스처럼 Stateful 애플리케이션을 쿠버네티스에서 실행하는 것은 매우 복잡한 일이다. 그래서 Stateful한 DB같은 경우에는 StatefulSet으로 배포한다.
+
+Service architecture of K8s
+------
+&ensp;K8s cluster는 master nodes와 worker nodes로 구성되어 있다.
+* K8s allows to mount a storage(local, cloud, network, storage) for each pod
+* Kubelet process in worker node communicates with master and other workers to run pods
+
+&ensp;위 내용들을 정리하면 다음과 같다.<br/>
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-12-KubernetesArchitecture.png" width="800"></p>
+
+Key concepts in K8s
+------
+* Pods, or groups of containers - Group together container images developed by different teams into a single deployable(배치할 수 있는) unit.
+  - logical host of containers sharing network and storage resources for a service
+  - containers in a pod are always co-located and co-scheduled, and run in a shared context
+* Service(각 pod에 자동으로 부여되는 ephemeral 내부 IP주소 대신에 microservice를 식별하기 위해) provide load balancing, naming, and discovery to isolate one microservice from another.
+* Namespaces provide isolation and access control, so that each microservice can control the degree to which other services interact with it.
+* K8s Ingress provides an easy-to-use frontend that can combine multiple microservices into a single externalized API surface area.
+
+K8s services and ingress
+------
+<p align="center"><img src="/assets/img/Software-Engineering/8장-Kubernetes/1-13-ServicesAndIngress.png" width="800"></p>
+* Ingress를 통해 외부에서 Kubernetes 클러스터의 서비스에 접근하는 것을 관리한다.
+* 서시스로 들어오는 외부 트래픽의 URL/호스트 이름에 따라 어느 서비스로 routing되는지를 결정하는 rule set을 규정한다.
+
+Creating Kubernetes Cluster with Kubeadm
+======
+
+Installing k8s with kubeadmin
+------
+&ensp;**kubeadmin**은 쿠버네티스 클러스터 생성을 위한 "빠른 경로"의 모범 사례로 kubeadm init 및 kubeadm join을 제공하도록 만들어진 도구이다. Kubeadm은 실행 가능한 최소 클러스터를 시작하고 실행하는 데 필요한 작업을 수행한다.
+
+TCP ports in K8s cluster deployment
+------
+&ensp;네트워크 경계가 엄격한 환경에서 쿠버네티스를 실행할 때, 쿠버네티스 구성 요소에서 사용하는 포트와 프로토콜(TCP)을 알고 있는 것이 유용한다.
+* Control Plane(Master Node)
+  - 6443: Kubernetes API server, Used by All
+  - 2379~2380: etcd server client API, Used by kube-apiserver, etcd
+  - 10250: Kubelet API, Used by Self, Control plane
+  - 10259: Kube-scheduler, Used by Self
+  - 10257: Kube-controller-manager, Used by Self
+* Worker Nodes
+  - 10250: Kubelet API, Used by Self, Control plane
+  - 30000~32767: NodePort Services, Used by All
+
+실습
+------
+&ensp;Procedures to deploy K8s cluster on bare machines
+* Add Kubernetes Repository
+* Install kubelet, kubeadm, kubectl and docker
+* Enable and start the kubelet and docker service
+* Create Cluster with kubeadm
+* Setup Pod network
+* Join Worker Nodes
+* Test the cluster by creating a test pod
+
+
+
+Kubeadm
+------
+&ensp;Kubernetes에서 제공하는 기본적인 도구이며 kubernetes 클러스터를 구축하기 위한 다양한 기능을 제공한다.
+* kubeadm init: control plane을 초기화하는 명령
+* kubeadm join: worker 노드를 초기화하고 cluster에 가입시킴
+* kubeadm token: control plane과 worker 노드들 사이의 인증
+* kubeadm reset: kubeadm init과 kubeadm join을 reset
+
+K8s yaml 파일
+======
+
+Kubernetes Orchestration
+======
+
+Kubernetes Networking
+======
