@@ -67,3 +67,15 @@ Make Symmetry modeling
 
 Load and Constraint in Cylindrical Coordinate
 ======
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Ansys/Lecture2-3-1.png"></p>
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Ansys/Lecture2-3-2.png"></p>
+
+&ensp;다음과 같이 모델링을 먼저 한다.<br/>
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Ansys/Lecture2-3-3.png"></p>
+
+&ensp;먼저, Material을 Aluminum Alloy로, **Coordinate Systems**에서 Definition Type을 **Cylindrical**로, 두 Inner surface of cylinder를 각각 선택해 만든다.<br/>
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Ansys/Lecture2-3-4.png"></p>
+
+&ensp;이제 Elements Size를 3.0mm로, Elements Type을 Automatic으로 Mesh를 짠다. 그리고 Constrain에서 A와 B의 안쪽면에 Displacement로 각각 Coordinate System을 선택해 X = 0, Y = Free, Z = 0을 해준다. 그리고 C의 안쪽면에 X방향으로 1000N, Z방향으로 50Nm를 준다.<br/>
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Ansys/Lecture2-3-5.png"></p>
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Ansys/Lecture2-3-6.png"></p>
