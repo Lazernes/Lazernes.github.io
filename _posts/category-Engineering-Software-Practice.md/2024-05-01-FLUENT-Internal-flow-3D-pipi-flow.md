@@ -59,5 +59,20 @@ FLuent
 &ensp;**Surface**의 Plane에서 다음과 같이 ZX Plane에서 Y=2를 입력 후 평면을 하나 만든다.<br/>
 <p align="center"><img src="/assets/img/공학소프트웨어실습/Fluent/Lecture3-2-6.png" width = "600"></p>
 
-&ensp;또한, Method를 Point and Normal로 하고 Select with Mouse를 이용해 다음과 같이 평면의 위치를 설정하고, Normal에서 IX, IY, IZ를 1, 0, 0으로 설정한다.<br/>
+&ensp;또한, Method를 Point and Normal로 하고 Select with Mouse를 이용해 다음과 같이 평면의 위치를 설정하고, Normal에서 IX, IY, IZ를 1, 0, 0으로 설정한다. 그리고 추가로 XY Plane, Z=0으로 하나 더 만든다.<br/>
 <p align="center"><img src="/assets/img/공학소프트웨어실습/Fluent/Lecture3-2-7.png" width = "600"></p>
+
+&ensp;이제 **Vectors**에서 생성한 Plane을 선택하면 다음과 같이 볼 수 있다.<br/>
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Fluent/Lecture3-2-8.png" width = "600"></p>
+
+&ensp;또한 다음과 같이 inlet과 outlet에서 vectors를 볼 수 있다.<br/>
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Fluent/Lecture3-2-9.png" width = "600"></p>
+
+&ensp;다음과 같이 질량유량을 확인할 수 있다.<br/>
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Fluent/Lecture3-2-10.png" width = "600"></p>
+
+&ensp;다음과 같이 압력을 확인할 수 있다.<br/>
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Fluent/Lecture3-2-11.png" width = "600"></p>
+
+&ensp;다음과 같이 손실 계수를 구할 수 있다.<br/>
+<p align="center"><img src="/assets/img/공학소프트웨어실습/Fluent/Lecture3-2-11.png" width = "600"></p>
