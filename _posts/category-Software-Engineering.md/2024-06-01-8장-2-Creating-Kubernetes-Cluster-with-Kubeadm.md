@@ -48,7 +48,7 @@ TCP ports in K8s cluster deployment
 * Kubeadm 도구를 설치하기 전에 Linux OS에 준비해야 하는 작업
 * 원하는 container runtime을 선정하여 설치하는 작업
 * Kubeadm 도구(kubeadm, kubectl, kubelet)를 설치하는 작업
-  - 위 세 작읍은 control plane과 worker 노드들 모두에게 해야하는 작업이다.
+  - 위 세 작업은 control plane과 worker 노드들 모두에게 해야하는 작업이다.
 * 원하는 Pod network addon을 선정하여 설치하는 작업
   - control plane과 worker nodes 사이에 Pod 네트워크를 설치하여 통신할 수 있도록 kubernetes network addon을 설치해야하는데 container runtime과 마찬가지로 원하는 network addon을 선정하여 설치해야한다.
   - network addon은 control plane에만 설치해도 kubeadm init 명령으로 control plane을 설정하고 worker nodes에서 kubeadm join 명령을 수행하면 kubernetes cluster가 생성되면서 control plane이 worker nodes를 인식하여 Pod network 통신에 필요한 모든 것을 수행하므로 worker nodes에는 network addon을 설치할 필요는 없다.
@@ -119,7 +119,7 @@ Linux OS에 준비해야 하는 작업
 
 Kubeadm도구(kubeadm, kubectl, kubelet)를 설치하는 작업
 ------
-&ensp;**kubeadm**는 클러스터 구축을 위해 사용하는 도구, **kubelet**은 Pod의 시작, 관리를 위해 사용되는 컨테이너 프로세스, **kubectl**은 사용자의 Command line 도구로서 control plane의 API server와 통신하여 app을 deploy하거나 클러스터를 조사, 관리하는 명령을 수행할 수 있다. 자칫, control plane에 kubelet을 설치할 필요가 없을 것으로 착각할 수 있으나, control plane과 worker 노드 모두에 kubernetes archotecture의 모든 구성 요소를은 container로 구현되어 있어 control plane도 kubelet가 설치되어야 한다.
+&ensp;**kubeadm**는 클러스터 구축을 위해 사용하는 도구, **kubelet**은 Pod의 시작, 관리를 위해 사용되는 컨테이너 프로세스, **kubectl**은 사용자의 Command line 도구로서 control plane의 API server와 통신하여 app을 deploy하거나 클러스터를 조사, 관리하는 명령을 수행할 수 있다. 자칫, control plane에 kubelet을 설치할 필요가 없을 것으로 착각할 수 있으나, control plane과 worker 노드 모두에 kubernetes architecture의 모든 구성 요소들은 container로 구현되어 있어 control plane도 kubelet가 설치되어야 한다.
 * **sudo mkdir -p 755 /etc/apt/keyrings**
   - -p: 이미 존재하면 mkdir 하지 않고 없으면 directory를 만드는 옵션
   - 755: 소유자는 읽기, 쓰기, 실행 권한을, 그룹과 다른 사용자들은 읽기 및 실행 권한을 가진다.

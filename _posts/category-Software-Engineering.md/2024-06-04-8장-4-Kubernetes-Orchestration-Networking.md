@@ -91,7 +91,7 @@ Services & Ingress in K8s
     + ExternalName: 클러스터 내부에서 외부로 접근할 때 주로 이용한다.
   - Ingress: 클라우드 제공자가 제공하는 로드 밸런서를 사용하여 외부 트래픽을 자동으로 분산한다. 클러스터 외부에서 안에 있는 파드에 접근할 때 사용하는 방법이다.
 * pod들은 ephemeral private IP 배정된다. 따라서 pod의 private IP를 사용해서는 외부에서 접근할 수 없는 것은 물론이고 pod네트워크 내부에서도 생성, 소멸하는 IP주소를 알 수 없으면 접근이 불가능하다.
-* Service는 pod들에게 **stable IP**와 **DNS 이름**을 제공하여 해당 pod들을 접슨할 수 있도록 하며 pod들 사이의 load balance와 service discovery 기능을 수행하여 다수 replica pod들에 외부 client가 접근할 수 있는 단일 endpoint를 제공한다.
+* Service는 pod들에게 **stable IP**와 **DNS 이름**을 제공하여 해당 pod들을 접근할 수 있도록 하며 pod들 사이의 load balance와 service discovery 기능을 수행하여 다수 replica pod들에 외부 client가 접근할 수 있는 단일 endpoint를 제공한다.
 * NodePort type의 service는 외부에 서비스를 제공하는 노드의 public IP를 공개하므로 개발자들이 편리하게 사용하는 용도 외에는 prodiction 서비스로는 제공할 수 없어서 Ingress가 제공된다.
 * Ingress는 K8s service들을 K8s 클러스터 밖에서 접근할 수 있도록 하며 어떤 inbound traffic이 어떤 service에 접근할 수 있는지에 대한 일련의 rule을 생성하여 service에 대한 접근을 configure한다.
 <p align="center"><img src="/assets/img/Software-Engineering/8장-4-K8s-orchestraion&networking/1-3-service&ingress.png" width="600"></p>
