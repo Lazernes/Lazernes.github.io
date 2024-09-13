@@ -61,6 +61,8 @@ docs:
        url: "/categories/Software Engineering"
      - title: "AIML 응용프로젝트"
        url: "/categories/AIML"
+     - title: "Deep Learning with Python"
+       url: "/categories/Deep Learning with Python"
 
   - title: Mechanical Engineering
     use: true
