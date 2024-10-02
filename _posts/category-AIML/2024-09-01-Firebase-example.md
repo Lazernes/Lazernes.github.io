@@ -1,6 +1,6 @@
 ---
 title: "Firebase example"
-excerpt: "."
+excerpt: "SpringBoot와 Firebase를 연동하여 CRUD를 구현한다."
 
 wirter: Myeongwoo Yoon
 categories:
