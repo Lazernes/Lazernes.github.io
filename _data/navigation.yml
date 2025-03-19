@@ -41,8 +41,8 @@ docs:
     children:
      - title: "BEAKJOON"
        url: "/categories/BEAKJOON"
-     - title: "Do it! 알고리즘 코딩테스트 C++"
-       url: "/categories/Do it! 알고리즘 코딩테스트 C++"
+     - title: "Do it! 알고리즘 코딩테스트"
+       url: "/categories/Do it! 알고리즘 코딩테스트"
 
   - title: Computer Engineering
     use: true
