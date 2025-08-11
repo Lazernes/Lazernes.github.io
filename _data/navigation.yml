@@ -37,6 +37,8 @@ docs:
        url: "/categories/김영한의 스프링 입문"
      - title: "김영한의 스프링 핵심 원리"
        url: "/categories/김영한의 스프링 핵심 원리"
+     - title: "HTTP 웹 기본 지식"
+       url: "/categories/HTTP 웹 기본 지식"  
      - title: "Projects"
        url: "/categories/BackendProjects"
 
