@@ -41,6 +41,8 @@ docs:
        url: "/categories/HTTP 웹 기본 지식"  
      - title: "Projects"
        url: "/categories/BackendProjects"
+     - title: "백엔드 아키텍처 심화 과정"
+       url: "/categories/백엔드 아키텍처 심화 과정"
 
   - title: Algorithm
     use: true
