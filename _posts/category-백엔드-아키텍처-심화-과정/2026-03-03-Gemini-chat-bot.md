@@ -114,8 +114,8 @@ public ResponseEntity<ProductResponseDto> generateAiDescription(@PathVariable UU
 ```
 
 &ensp;이제 Postman에서 테스트를 진행해본다.<br/>
-<p align="center"><img src="/assets/img/백엔드 아키텍처 심화 과정/Gemini chatbot/0-1-제품 생성.png" width="500"></p>
+<p align="center"><img src="/assets/img/백엔드 아키텍처 심화 과정/Gemini chatbot/0-1-제품 생성.png" width="700"></p>
 
-<p align="center"><img src="/assets/img/백엔드 아키텍처 심화 과정/Gemini chatbot/0-2-제품 설명 AI 자동생성.png" width="500"></p>
+<p align="center"><img src="/assets/img/백엔드 아키텍처 심화 과정/Gemini chatbot/0-2-제품 설명 AI 자동생성.png" width="700"></p>
 
 &ensp;정상적으로 설명이 생성된 것을 확인할 수 있다.
